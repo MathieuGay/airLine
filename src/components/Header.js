@@ -2,12 +2,19 @@ import React from 'react';
 import '../styles/Header.css';
 import './pages/Countries';
 import { Menubar } from 'primereact/menubar';
-import { InputText } from 'primereact/inputtext';
-import airLine from "../assets/airLine.png"
+import airLine from "../assets/airLine.png";
+import { useNavigate } from 'react-router-dom';
 import { Button } from 'primereact/button';
 
 
 export default function Header() {
+
+  const navigate = useNavigate();
+
+  const handleCountriesClick = () => {
+    navigate('/countries');  // Utilisez la fonction de navigation
+  };
+  
   const items = [
     {
       label: 'Acheter un billet',
@@ -34,7 +41,7 @@ export default function Header() {
       items: [
         {
           label: 'Europe',
-          url:'./pages/Countries.js',
+          command: handleCountriesClick,
           icon: 'pi pi-fw pi-globe',
         },
 
@@ -129,11 +136,11 @@ export default function Header() {
 }
   ];
 
-const start = <img alt="" src={airLine} class="logo"></img>;
+const start = <img alt="" src={airLine} className="logo"></img>;
 
 return (
   <div className="navbar">
-    <Menubar model={items} start={start} />
+    <Menubar model={items} start={start} className='navbar' />
   </div>
 )
 }

@@ -10,29 +10,10 @@ header {
     max-height: 5rem; /* Ajustez la taille du logo selon vos besoins */
     margin-right: 10rem; /* Espace entre le logo et les onglets */
   }
-  
-  nav {
-    display: flex;
-    justify-content: center;
+
+  .navbar{
+    background-color: #ff9292 !important;
   }
   
-  nav ul {
-    list-style: none;
-    padding: 0;
-    display: flex;
-  }
-  
-  nav li {
-    margin: 0 5rem;
-  }
-  
-  nav a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 18px;
-  }
-  
-  nav a:hover {
-    text-decoration: underline;
-  }
+
   
