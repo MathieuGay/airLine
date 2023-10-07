@@ -1,6 +1,5 @@
 import React from 'react';
 import '../styles/Header.css';
-import './pages/Countries';
 import { Menubar } from 'primereact/menubar';
 import airLine from "../assets/airLine.png";
 import { useNavigate } from 'react-router-dom';
@@ -12,7 +11,7 @@ export default function Header() {
   const navigate = useNavigate();
 
   const handleCountriesClick = () => {
-    navigate('/countries');  // Utilisez la fonction de navigation
+    navigate('/DataCountries');  // Utilisez la fonction de navigation
   };
   
   const items = [
