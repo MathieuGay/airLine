@@ -1,5 +1,6 @@
 import React from 'react';
 import '../styles/Header.css';
+import './pages/Countries';
 import { Menubar } from 'primereact/menubar';
 import { InputText } from 'primereact/inputtext';
 import airLine from "../assets/airLine.png"
@@ -27,41 +28,31 @@ export default function Header() {
       ]
     },
     {
+      
       label: 'Liste des Pays',
-      icon: 'pi pi-fw pi-bookmark',
+      icon: 'pi pi-fw pi-globe',
       items: [
         {
           label: 'Europe',
-          icon: 'pi pi-fw pi-align-left',
-          items: [
-            {
-              label: 'Filter',
-              icon: 'pi pi-fw pi-filter',
-            }
-          ]
+          url:'./pages/Countries.js',
+          icon: 'pi pi-fw pi-globe',
         },
 
         {
           label: 'America',
-          icon: 'pi pi-fw pi-align-right',
+          icon: 'pi pi-fw pi-globe',
           items: [
             {
               label: 'North America',
-              icon: 'pi pi-fw pi-filter',
             },
             {
               label: 'South America',
-              icon: 'pi pi-fw pi-filter',
             }
           ]
         },
     {
-      label: 'Center',
-      icon: 'pi pi-fw pi-align-center'
-    },
-    {
-      label: 'Justify',
-      icon: 'pi pi-fw pi-align-justify'
+      label: 'Asia',
+      icon: 'pi pi-fw pi-globe',
     },
 
   ]
