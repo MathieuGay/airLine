@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import '../../styles/Informations.css'
 import { Chart } from 'primereact/chart';
 
 export default function Informations() {
@@ -8,10 +9,10 @@ export default function Informations() {
     useEffect(() => {
         const documentStyle = getComputedStyle(document.documentElement);
         const data = {
-            labels: ['A', 'B', 'C'],
+            labels: ['Europe', 'America', 'Asia'],
             datasets: [
                 {
-                    data: [540, 325, 702],
+                    data: [700, 555, 502],
                     backgroundColor: [
                         documentStyle.getPropertyValue('--blue-500'),
                         documentStyle.getPropertyValue('--yellow-500'),
@@ -38,11 +39,22 @@ export default function Informations() {
         setChartData(data);
         setChartOptions(options);
     }, []);
- 
+
     return (
-        <div className="card flex justify-content-center">
-            <p>hello</p>
-            <Chart type="pie" data={chartData} options={chartOptions} className="w-full md:w-30rem" />
-        </div>
+        <>
+            <section>
+                <div className="informations-container">
+                    <div className="chart-container border rounded p-2">
+                        <Chart type="pie" data={chartData} options={chartOptions} className="w-full" style={{ height: '200px', width: '200px' }} />
+                    </div>
+                    <div className="chart-container border rounded p-2">
+                        <Chart type="pie" data={chartData} options={chartOptions} className="w-full" style={{ height: '200px', width: '200px' }} />
+                    </div>
+                    <div className="chart-container border rounded p-2">
+                        <Chart type="pie" data={chartData} options={chartOptions} className="w-full" style={{ height: '200px', width: '200px' }} />
+                    </div>
+                </div>
+            </section>
+        </>
     )
 }

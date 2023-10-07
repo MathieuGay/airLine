@@ -1,0 +1,13 @@
+.informations-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100vh; /* Ajustez selon vos préférences */
+  }
+
+.chart-container{
+    border: 0.5rem solid #ff9292 !important;
+    border-radius: 1rem 1rem;
+    border: black;
+}
+  
