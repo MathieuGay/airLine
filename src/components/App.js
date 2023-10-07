@@ -1,5 +1,6 @@
 import '../styles/App.css';
 import Header from "./Header";
+import Informations from '../components/pages/Informations'
 import DataCountries from '../dataCountries/DataCountries';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
@@ -9,6 +10,7 @@ function App() {
       <div className="App">
         <Header />
         <Routes> {/* Utilisez Routes au lieu de Switch */}
+        <Route path="/Informations" element={<Informations />} />
           <Route path="/DataCountries" element={<DataCountries />} /> {/* Utilisez element au lieu de component */}
           {/* Ajoutez d'autres routes si nécessaire */}
         </Routes>

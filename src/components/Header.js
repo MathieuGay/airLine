@@ -13,7 +13,11 @@ export default function Header() {
   const handleCountriesClick = () => {
     navigate('/DataCountries');  // Utilisez la fonction de navigation
   };
-  
+
+  const handleInfoClick = () => {
+    navigate('/Informations');  // Utilisez la fonction de navigation
+  };
+
   const items = [
     {
       label: 'Acheter un billet',
@@ -34,74 +38,19 @@ export default function Header() {
       ]
     },
     {
-      
-      label: 'Liste des Pays',
-      icon: 'pi pi-fw pi-globe',
-      items: [
-        {
-          label: 'Europe',
-          command: handleCountriesClick,
-          icon: 'pi pi-fw pi-globe',
-        },
 
-        {
-          label: 'America',
-          icon: 'pi pi-fw pi-globe',
-          items: [
-            {
-              label: 'North America',
-            },
-            {
-              label: 'South America',
-            }
-          ]
-        },
-    {
-      label: 'Asia',
+      label: 'Liste des Pays',
+      command: handleCountriesClick,
       icon: 'pi pi-fw pi-globe',
     },
-
-  ]
-},
-{
-  label: 'Users',
-    icon: 'pi pi-fw pi-user',
-      items: [
-        {
-          label: 'New',
-          icon: 'pi pi-fw pi-user-plus',
-
-        },
-        {
-          label: 'Delete',
-          icon: 'pi pi-fw pi-user-minus',
-
-        },
-        {
-          label: 'Search',
-          icon: 'pi pi-fw pi-users',
-          items: [
-            {
-              label: 'Filter',
-              icon: 'pi pi-fw pi-filter',
-              items: [
-                {
-                  label: 'Print',
-                  icon: 'pi pi-fw pi-print'
-                }
-              ]
-            },
-            {
-              icon: 'pi pi-fw pi-bars',
-              label: 'List'
-            }
-          ]
-        }
-      ]
-},
-{
-  label: 'Events',
-    icon: 'pi pi-fw pi-calendar',
+    {
+      label: 'Informaions',
+      command: handleInfoClick,
+      icon: 'pi pi-fw pi-info-circle',
+    },
+    {
+      label: 'Events',
+      icon: 'pi pi-fw pi-calendar',
       items: [
         {
           label: 'Edit',
@@ -128,19 +77,19 @@ export default function Header() {
           ]
         }
       ]
-},
-{
-  label: 'Quit',
-    icon: 'pi pi-fw pi-power-off'
-}
+    },
+    {
+      label: 'Quit',
+      icon: 'pi pi-fw pi-power-off'
+    }
   ];
 
-const start = <img alt="" src={airLine} className="logo"></img>;
+  const start = <img alt="" src={airLine} className="logo"></img>;
 
-return (
-  <div className="navbar">
-    <Menubar model={items} start={start} className='navbar' />
-  </div>
-)
+  return (
+    <div className="navbar">
+      <Menubar model={items} start={start} className='navbar' />
+    </div>
+  )
 }
 
