@@ -1,5 +1,6 @@
 import React from 'react';
 import '../styles/Header.css';
+import CircleMenu from "./CircleMenu";
 import { Menubar } from 'primereact/menubar';
 import airLine from "../assets/airLine.png";
 import { useNavigate } from 'react-router-dom';
@@ -86,9 +87,14 @@ export default function Header() {
 
   const start = <img alt="" src={airLine} className="logo"></img>;
 
+
   return (
-    <div className="navbar">
-      <Menubar model={items} start={start} className='navbar' />
+    <div className="navbar-container">
+      
+      <div className="navbar">
+        <Menubar model={items} start={start} className='navbar' />
+        <CircleMenu />
+      </div>
     </div>
   )
 }

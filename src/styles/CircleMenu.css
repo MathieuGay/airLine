@@ -1,0 +1,10 @@
+.p-speeddial{
+    margin-top: 1rem;
+    margin-right: 1rem;
+    border-radius: 30px;
+}
+
+.p-button.p-button-help{
+    background-color: #0059ff;
+    border: 1px solid white;
+}
